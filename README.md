@@ -14,17 +14,18 @@ in almost all programming languages can "roll over".
 For a 64-bit unsigned integer variable,
 setting that variable to 0xFFFFFFFFFFFFFFFF and incrementing
 it gives it the value 0.
+The value 0xFFFFFFFF works the same way for 32-bit unsigned integers.
 
-You also have to know that bitwise-and of 0xFFFFFFFFFFFFFFFF with
+You also have to know that bitwise-and of 0xFFFFFFFF with
 any value gives back that value.
-A bitwise-and of 0x0000000000000000 with any value gives you
+A bitwise-and of 0x00000000 with any value gives you
 a value of zero.
 
 So the "y if b is 0" is available like this:
 
 ```go
-var zork uint64 
-zork = 0xFFFFFFFFFFFFFFFF 
+var zork uint32
+zork = 0xFFFFFFFF 
 result := y & (zork + b)
 ``` 
 
@@ -45,6 +46,12 @@ then add the two to get the desired result.
 The hard parts here are knowing a few bitwise operations,
 2s-complement arithmetic, and the insight that 0 + x equals x.
 
+Other people have solved this in much the same way,
+except [they usually](https://github.com/iamvictorli/Daily-Coding-Problem/blob/master/solutions/81-90/Problem85.js)
+thought of creating the and-mask not by under or overflow,
+but rather by knowing that setting `b = -b` gives you all 1-bits
+if b originally has the value 1, and all 0-bits if b is originally zero.
+
 ## Interview Analysis
 
 There's actually minimal programming involved with this problem.
@@ -54,6 +61,10 @@ what values cause over- or under-flow,
 and the bitwise-and operation.
 
 This may be what the interviewer wants to find out.
-If so, this is a good problem.
 If the interviewer wants to see some programming,
 this is not a good problem for a job interview.
+
+I still think that wanting a job candidate to remember bitwise stunts
+in a stressful job interview is too much.
+Also, the "medium" rating isn't deserved if you know the trick,
+but if you don't know the trick, this is a very difficult problem.
