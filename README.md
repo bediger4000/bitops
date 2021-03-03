@@ -7,6 +7,22 @@ return x if b is 1 and y if b is 0,
 using only mathematical or bit operations.
 You can assume b can only be 1 or 0.
 
+## Build and run
+
+I wrote a command line program which accepts arguments in hexadecimal.
+The arguments in order are `x y b`
+
+```sh
+$ go build a1.go
+$ ./a1 fe ef 0
+fe      ef      0
+result: ef
+$ ./a1 fe ef 1
+fe      ef      1
+result: fe
+$
+```
+
 ## Analysis
 
 Solving this hinges on knowing that an unsigned integer
