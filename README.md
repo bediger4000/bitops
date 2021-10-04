@@ -1,7 +1,7 @@
 # Bitwise Operations Interview Questions
 
-* [Choice of number]()
-* [Maximum of new numbers]()
+* [Choice of two numbers](#daily-coding-problem-problem-816-medium)
+* [Maximum of two numbers](#daily-coding-problem-problem-1011-hard)
 
 ---
 
