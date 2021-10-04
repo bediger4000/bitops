@@ -1,3 +1,10 @@
+# Bitwise Operations Interview Questions
+
+* [Choice of number]()
+* [Maximum of new numbers]()
+
+---
+
 # Daily Coding Problem: Problem #816 [Medium] 
 
 This problem was asked by Facebook.
@@ -84,3 +91,16 @@ I still think that wanting a job candidate to remember bitwise stunts
 in a stressful job interview is too much.
 Also, the "medium" rating isn't deserved if you know the trick,
 but if you don't know the trick, this is a very difficult problem.
+
+---
+
+# Daily Coding Problem: Problem #1011 [Hard]
+
+This problem was asked by Nvidia.
+
+Find the maximum of two numbers without using any if-else statements,
+branching, or direct comparisons.
+
+# Analysis
+
+# Interview Analysis
