@@ -1,6 +1,7 @@
 # Bitwise Operations Interview Questions
 
 * [Choice of two numbers](#daily-coding-problem-problem-816-medium)
+* [Swap bits of 8-bit integer](#daily-coding-problem-problem-1780-medium)
 * [Maximum of two numbers](#daily-coding-problem-problem-1011-hard)
 
 ---
@@ -91,6 +92,56 @@ I still think that wanting a job candidate to remember bitwise stunts
 in a stressful job interview is too much.
 Also, the "medium" rating isn't deserved if you know the trick,
 but if you don't know the trick, this is a very difficult problem.
+
+---
+
+# Daily Coding Problem: Problem #1780 [Medium]
+
+This problem was asked by Cisco.
+
+Given an unsigned 8-bit integer, swap its even and odd bits.
+The 1st and 2nd bit should be swapped, the 3rd and 4th bit should be swapped, and so on.
+
+For example, `10101010` should be `01010101`. `11100010` should be `11010001`.
+
+Bonus: Can you do this in one line?
+
+## Build and run
+
+I wrote a command line program which accepts arguments in text represention of 8-bit binary numbers.
+
+```sh
+$ go build c1.go
+$ ./c1 10101010
+original: 10101010
+swapped:  01010101
+swapped:  01010101
+```
+
+There's two "swapped" 8-bit integer string representations
+because one of them is the result of the bonus "one-liner".
+
+## Analysis
+
+Again, minimal actual programming involved with this problem.
+Solving this involves knowing how to mask bits with binary-and,
+put bits together with binary-or, and shift bits both left and right.
+That's it, except for remembering that `>>` and `<<` *shift* bits,
+not roll them.
+
+I did the code above off the top of my head, and it worked the first compile.
+Not to brag, this is a simple problem.
+
+## Interview Analysis
+
+I can't imagine that this gets an interviewer any knowledge
+about a candidate's coding skill, except whether they can do bitwise operations.
+I suppose the interviewer could get operation priority knowledge out of
+a candidate by getting them to remove parentheses in the on-liner.
+
+Maybe a candidate could suggest other test cases,
+perhaps to see if shifting a bit off the left or right of the 8-bit value
+works correctly.
 
 ---
 
