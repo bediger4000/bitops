@@ -125,9 +125,8 @@ because one of them is the result of the bonus "one-liner".
 
 Again, minimal actual programming involved with this problem.
 Solving this involves knowing how to mask bits with binary-and,
-put bits together with binary-or, and shift bits both left and right.
-That's it, except for remembering that `>>` and `<<` *shift* bits,
-not roll them.
+put bits together with binary-or.
+That's it.
 
 I did the code above off the top of my head, and it worked the first compile.
 Not to brag, this is a simple problem.
@@ -140,8 +139,7 @@ I suppose the interviewer could get operation priority knowledge out of
 a candidate by getting them to remove parentheses in the on-liner.
 
 Maybe a candidate could suggest other test cases,
-perhaps to see if shifting a bit off the left or right of the 8-bit value
-works correctly.
+perhaps to see if every position swaps correctly.
 
 ---
 
